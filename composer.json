@@ -1,0 +1,24 @@
+{
+    "name": "evemarket/eve-market-details-laravel-bridge",
+    "type": "library",
+    "description": "This is a bridge between the Eve Online Public Crest and the Laravel Framework.",
+    "keywords": ["framework", "http", "fetching", "api", "eveonline", "laravel"],
+    "homepage": "http://adambalan.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Balan",
+            "email": "adamkylebalan@gmail.com",
+            "homepage": "https://github.com/eve-online"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "evemarket/eve-market-details": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "EveOnlineBridge\\": "src/"
+        }
+    }
+}
