@@ -4,7 +4,7 @@ This small library is a bridge between the [Eve Public Crest PHP Library](https:
 
 ## Installation:
 
-`composer require eve-online-public-crest-bridge`
+`composer require evemarket/eve-market-details-laravel-bridge`
 
 ### Set Up
 
