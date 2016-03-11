@@ -15,7 +15,7 @@ Register the provider:
 
         ...
 
-        EveOnlineBridge\Service\Provider\EverMarketProvider::class
+        EveOnlineBridge\Service\Provider\EveMarketProvider::class
     ],
 ```
 
