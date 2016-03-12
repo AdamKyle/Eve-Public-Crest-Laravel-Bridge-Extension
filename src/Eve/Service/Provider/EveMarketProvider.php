@@ -15,7 +15,7 @@ use GuzzleHttp\Client;
 
 class EveMarketProvider extends ServiceProvider {
 
-    $this->client = new Client();
+    protected $client = new Client();
 
     /**
      * Register the application services.
