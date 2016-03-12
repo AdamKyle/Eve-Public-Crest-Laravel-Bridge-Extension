@@ -15,6 +15,8 @@ use GuzzleHttp\Client;
 
 class EveMarketProvider extends ServiceProvider {
 
+    $this->client = new Client();
+
     /**
      * Register the application services.
      *
@@ -22,35 +24,32 @@ class EveMarketProvider extends ServiceProvider {
      */
     public function register()
     {
-        // Create an instance of client.
-        $client = new Client();
-
         $this->app->singleton('eveonline.items.details', function () {
-            return new Details($client);
+            return new Details($this->client);
         });
 
         $this->app->singleton('eveonline.market.groups', function () {
-            return new MarketGroups($client);
+            return new MarketGroups($this->client);
         });
 
         $this->app->singleton('eveonline.market.history', function () {
-            return new MarketHistory($client);
+            return new MarketHistory($this->client);
         });
 
         $this->app->singleton('eveonline.market.orders', function () {
-            return new Order($client);
+            return new Order($this->client);
         });
 
         $this->app->singleton('eveonline.market.prices', function () {
-            return new Prices($client);
+            return new Prices($this->client);
         });
 
         $this->app->singleton('eveonline.market.types', function () {
-            return new Types($client);
+            return new Types($this->client);
         });
 
         $this->app->singleton('eveonline.regions', function () {
-            return new Regions($client);
+            return new Regions($this->client);
         });
 
         $this->app->alias('eveonline.items.details',  Details::class);
