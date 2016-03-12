@@ -15,7 +15,7 @@ use GuzzleHttp\Client;
 
 class EveMarketProvider extends ServiceProvider {
 
-    protected $client = new Client();
+    protected $client;
 
     /**
      * Register the application services.
@@ -24,6 +24,8 @@ class EveMarketProvider extends ServiceProvider {
      */
     public function register()
     {
+        $this->client = new Client();
+
         $this->app->singleton('eveonline.items.details', function () {
             return new Details($this->client);
         });
